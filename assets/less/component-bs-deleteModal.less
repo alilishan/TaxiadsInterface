@@ -1,0 +1,123 @@
+
+
+#modal-delete {
+
+.vertical-alignment-helper {
+display:table;
+height: 100%;
+width: 100%;
+}
+.vertical-align-center {
+/* To center vertically */
+display: table-cell;
+vertical-align: middle;
+}
+.modal-content {
+/* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
+width:inherit;
+height:inherit;
+/* To center horizontally */
+margin: 0 auto;
+}
+	
+	.dc-dismiss-x {
+		display: block;
+		width: 16px;
+		height: 16px;
+		position: absolute;
+		top:0;
+		right: 0;
+		margin: -20px -25px 0 0;
+		cursor: pointer;
+		background-image: url('@{imgs_path}base-sprite.png?v=@{version}');
+		background-position: -294px -232px;
+		background-repeat: no-repeat;
+		background-color: transparent;
+	}
+
+	.dc-heading {
+		padding: 20px 10px;
+		color: #d9534f;
+		font-size: 28px;
+		margin: 0 0 0;
+		text-align: center;
+	}
+
+	.dc-content {
+		border-top: 1px solid #eaecf1;
+		background: #f9f9fb;
+		padding: 30px;
+		box-sizing: border-box; 
+		text-align: left;
+		border-radius: 0 0 6px 6px;
+
+		h3 {
+			font-size: 1.3em;
+			color: #464d5d;
+			margin: 0 0 12px;
+		}
+
+		strong {    
+			font-weight: 600;
+		}
+
+		.checkedbox {
+			font-size: 1.1em;
+			line-height: 20px;
+			color: #7e8890;
+			font-weight: 400;
+			cursor: pointer;
+			text-align: left;
+			margin: 15px 0;
+			padding: 5px 0 5px 32px;
+			position: relative;
+
+			&:before,
+			&:after {
+				content: '';
+				position: absolute;
+				left: 1px;
+				top: 4px;
+				width: 20px;
+				height: 20px; 
+			}
+
+			&:before {
+				border: 1px solid #ccc;
+				border-radius: 2px;
+			}
+
+			&:after {
+				font: normal normal normal 11px/1 FontAwesome;
+				left: 6px;
+				top: 9px;
+			}
+
+			&.checked {
+				&:before {
+					border-color: #d9534f;
+				}
+				&:after {
+					content: "\f00c";
+					color: #d9534f;
+				}
+			}
+
+		}
+
+		.btn-bar {
+			text-align: center;
+			padding-top: 20px;
+
+			.btn {
+				text-transform: uppercase;
+				letter-spacing: .8px;
+				font-size: 1em;
+
+				+ .btn {
+					margin-left: 10px;
+				}
+			}
+		}
+	}
+}
